@@ -1,0 +1,5 @@
+.auth-links{display:flex;justify-content:space-between;gap:12px}
+.auth-links button{border:0;background:none;padding:0;color:var(--blue);font-size:11px;cursor:pointer}
+.auth-links button[hidden]{display:none}
+#authFields{display:grid;gap:14px}
+.signin-card .message{line-height:1.6;overflow-wrap:anywhere}

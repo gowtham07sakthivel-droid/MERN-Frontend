@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechKart | Gadgets for Everyone</title>
+  <link rel="stylesheet" href="/assets/style.css" />
+  <link rel="stylesheet" href="/assets/auth.css" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="top-strip">⚡ Mega Gadget Deals — Free delivery on orders above ₹999</div>
+  <header class="header">
+    <a class="brand" href="#" data-page="home"><span class="brand-mark">T</span> Tech<span>Kart</span></a>
+    <form class="search" id="searchForm">
+      <input id="searchInput" type="search" placeholder="Search mobiles, laptops, headphones..." aria-label="Search products">
+      <button aria-label="Search">⌕</button>
+    </form>
+    <nav class="nav">
+      <a href="#" data-page="home" class="nav-link active">Home</a>
+      <a href="#" data-page="about" class="nav-link">About</a>
+      <a href="#" data-page="signin" class="nav-link">Sign in</a>
+      <button class="cart-button" id="cartNav">🛒 Cart <b id="cartCount">0</b></button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="homePage" class="page active">
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">THE FUTURE IS HERE</span>
+          <h1>Upgrade your<br><em>everyday tech.</em></h1>
+          <p>Discover hand-picked gadgets, smart accessories and the latest technology — all in one place.</p>
+          <button class="primary-btn" id="exploreBtn">Explore gadgets <span>→</span></button>
+          <div class="hero-points"><span>✓ Genuine products</span><span>✓ Easy returns</span><span>✓ Secure checkout demo</span></div>
+        </div>
+        <div class="hero-art">
+          <div class="orb orb-one"></div><div class="orb orb-two"></div>
+          <div class="hero-device">🎧</div>
+          <div class="float-card float-top">✨ New arrivals</div>
+          <div class="float-card float-bottom"><strong>Up to 40% OFF</strong><small>On selected gadgets</small></div>
+        </div>
+      </section>
+
+      <section class="section categories-section">
+        <div class="section-heading"><div><span class="eyebrow">SHOP BY CATEGORY</span><h2>Find your next favourite</h2></div><span class="muted">Explore the collection</span></div>
+        <div class="category-grid">
+          <button class="category-tile" data-category="Mobiles"><span>📱</span><b>Mobiles</b><small>Phones & tablets</small></button>
+          <button class="category-tile" data-category="Laptops"><span>💻</span><b>Laptops</b><small>Work & play</small></button>
+          <button class="category-tile" data-category="Audio"><span>🎧</span><b>Audio</b><small>Hear every detail</small></button>
+          <button class="category-tile" data-category="Wearables"><span>⌚</span><b>Wearables</b><small>Stay connected</small></button>
+        </div>
+      </section>
+
+      <section class="section products-section" id="productsSection">
+        <div class="section-heading"><div><span class="eyebrow">CUSTOMER FAVOURITES</span><h2>Trending gadgets</h2></div><button class="text-button" id="showAllBtn">View all products →</button></div>
+        <div class="filter-row">
+          <button class="filter-chip selected" data-filter="All">All</button>
+          <button class="filter-chip" data-filter="Mobiles">Mobiles</button>
+          <button class="filter-chip" data-filter="Laptops">Laptops</button>
+          <button class="filter-chip" data-filter="Audio">Audio</button>
+          <button class="filter-chip" data-filter="Wearables">Wearables</button>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+      <section class="promo-banner"><div><span class="eyebrow">A LITTLE EXTRA FOR YOU</span><h2>Good tech. Great prices.</h2><p>Make your everyday smarter with TechKart.</p></div><div class="promo-emoji">🚀</div></section>
+    </section>
+
+    <section id="aboutPage" class="page">
+      <div class="page-hero"><span class="eyebrow">WHO WE ARE</span><h1>Technology that<br><em>moves with you.</em></h1><p>TechKart makes discovering useful, exciting technology simple and enjoyable.</p></div>
+      <section class="section about-layout"><div><span class="eyebrow">OUR STORY</span><h2>Your tech, made simple.</h2><p>We are a gadget store built around one idea: shopping for technology should feel easy. From everyday essentials to the latest smart devices, TechKart brings popular gadget categories together in one clean shopping experience.</p><p>Create an account, sign in, and recover access with password reset. The product catalog and checkout are sample experiences; payments and order processing are not connected.</p></div><div class="about-stat-grid"><div class="stat-card"><b>4</b><span>Gadget categories</span></div><div class="stat-card"><b>8+</b><span>Featured products</span></div><div class="stat-card"><b>24/7</b><span>Browse anytime</span></div><div class="stat-card"><b>100%</b><span>Demo experience</span></div></div></section>
+    </section>
+
+    <section id="signinPage" class="page">
+      <div class="signin-wrap"><div class="signin-side"><span class="eyebrow">WELCOME TO TECHKART</span><h1>Your next<br><em>favourite gadget</em><br>is waiting.</h1><p>Sign in to explore your personal gadget store.</p><div class="signin-emoji">🛍️</div></div>
+        <form class="signin-card" id="authForm"><span class="eyebrow">YOUR ACCOUNT</span><h2 id="authTitle">Sign in</h2><p id="authDescription" class="muted">Enter your details to continue</p><div id="authFields"></div><button class="primary-btn full" id="authSubmit" type="submit">Sign in <span>→</span></button><small class="form-note" id="authNote">Your password is securely hashed before it is stored.</small><div id="authMessage" class="message" aria-live="polite"></div><div class="auth-links"><button type="button" data-auth-mode="register">Create account</button><button type="button" data-auth-mode="forgot">Forgot password?</button><button type="button" data-auth-mode="login" hidden>Back to sign in</button></div></form>
+      </div>
+    </section>
+
+    <section id="cartPage" class="page">
+      <section class="section cart-section"><span class="eyebrow">YOUR SELECTION</span><h1>Shopping cart</h1><div id="cartContent"></div></section>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#" data-page="home"><span class="brand-mark">T</span> Tech<span>Kart</span></a><p>Smart gadgets. Simple shopping.</p><small>© 2026 TechKart. Demo e-commerce website.</small></footer>
+  <div class="toast" id="toast"></div>
+  <script type="module" src="/assets/app.js"></script>
+</body>
+</html>
